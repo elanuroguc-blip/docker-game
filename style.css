@@ -1,7 +1,112 @@
-body { background: #1a1a2e; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-.container { background: #16213e; padding: 40px; border-radius: 15px; text-align: center; width: 300px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-select { width: 100%; padding: 10px; border-radius: 5px; border: none; background: #e94560; color: white; cursor: pointer; }
-.card { margin-top: 20px; padding: 15px; border: 2px solid #e94560; border-radius: 10px; animation: pop 0.3s ease; }
-@keyframes pop { from { scale: 0.8; } to { scale: 1; } }
-    to { opacity: 1; transform: translateY(0); }
+/* Genel Sayfa Düzeni */
+body { 
+    background: radial-gradient(circle, #1a1a2e, #16213e); 
+    color: white; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    overflow: hidden;
+}
+
+/* Ana Konteyner */
+.container { 
+    background: #0f3460; 
+    padding: 30px; 
+    border-radius: 20px; 
+    text-align: center; 
+    width: 350px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6); 
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Seçim Kutusu */
+select { 
+    width: 100%; 
+    padding: 12px; 
+    border-radius: 8px; 
+    border: none; 
+    background: #e94560; 
+    color: white; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+}
+
+select:hover {
+    background: #ff4d6d;
+    transform: scale(1.02);
+}
+
+/* Karakter ve Savaş Kartı */
+.card { 
+    margin-top: 20px; 
+    padding: 20px; 
+    border: 2px solid #e94560; 
+    border-radius: 15px; 
+    background: #16213e;
+    animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+/* Düşman Paneli (Yeni) */
+.monster-box {
+    background: rgba(233, 69, 96, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 1px dashed #e94560;
+}
+
+.monster-box h3 {
+    margin: 5px 0;
+    color: #ff4d6d;
+}
+
+/* Savaş Günlüğü (Yeni) */
+#log {
+    font-size: 13px;
+    color: #00ffcc;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: italic;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Saldırı Butonu (Yeni) */
+.attack-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff4d6d, #e94560);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+    transition: 0.2s;
+}
+
+.attack-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+}
+
+.attack-btn:active {
+    transform: translateY(1px);
+}
+
+/* Animasyonlar */
+@keyframes pop { 
+    from { opacity: 0; transform: scale(0.8); } 
+    to { opacity: 1; transform: scale(1); } 
 }
