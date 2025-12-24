@@ -1,5 +1,4 @@
 export const getCharacters = async () => {
-    // API simülasyonu (Stateless)
     return [
         { id: 1, name: "Savaşçı", baseHp: 150, baseAtk: 25, img: "🛡️" },
         { id: 2, name: "Büyücü", baseHp: 80, baseAtk: 50, img: "🪄" },
