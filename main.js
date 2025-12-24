@@ -68,7 +68,7 @@ function render() {
                 <p>👾 Düşman Canı: ${monster.hp}</p>
             </div>
             <p id="log"><em>${battleLog}</em></p>
-            <button onclick="startBattle()" style="padding:10px; background:gold; color:black; font-weight:bold; border-radius:5px; cursor:pointer;">💥 SALDIR!</button>
+            <button class="attack-btn" onclick="startBattle()">💥 SALDIR!</button>
         </div>
     `;
 }
