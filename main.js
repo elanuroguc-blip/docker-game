@@ -1,5 +1,5 @@
-import { getCharacters } from './services/country.js';
-import { getEquipments } from './services/weather.js';
+import { getCharacters } from './services/karakter.js';
+import { getEquipments } from './services/ekipman.js';
 
 const state = {
     chars: [],
