@@ -1,48 +1,7 @@
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle, #1a1a2e, #16213e);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-}
-
-.container {
-    background: #0f3460;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    width: 350px;
-    text-align: center;
-}
-
-select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: none;
-    background: #e94560;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.card {
-    background: #16213e;
-    padding: 20px;
-    border-radius: 15px;
-    border: 2px solid #e94560;
-    animation: fadeIn 0.5s ease;
-}
-
-h1 { font-size: 50px; margin: 10px 0; }
-h2 { color: #e94560; }
-.inv { background: rgba(255,255,255,0.1); padding: 10px; border-radius: 8px; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
+body { background: #1a1a2e; color: white; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+.container { background: #16213e; padding: 40px; border-radius: 15px; text-align: center; width: 300px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+select { width: 100%; padding: 10px; border-radius: 5px; border: none; background: #e94560; color: white; cursor: pointer; }
+.card { margin-top: 20px; padding: 15px; border: 2px solid #e94560; border-radius: 10px; animation: pop 0.3s ease; }
+@keyframes pop { from { scale: 0.8; } to { scale: 1; } }
     to { opacity: 1; transform: translateY(0); }
 }
